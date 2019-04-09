@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 from collections import defaultdict
 
 import random
@@ -146,7 +146,7 @@ def pat_match_with_seg(pattern:list, saying:list):
 
 def get_matched_key(saying:str,response_rules:dict)->str:
     matched_key = ''
-    print( response_rules.keys())
+   # print( response_rules.keys())
     i = 0
     for key in response_rules.keys():
         matched_data = pat_match_with_seg(key.split(),saying.split())
@@ -170,15 +170,19 @@ def get_response(saying:str, response_rules:dict):
     return ' '.join(response_data)
 
 
+print("I am XiaoMing, hello")
 print(get_response("I am XiaoMing, hello",rules))
 print('**********************************')
+print('I was ppp')
 print(get_response('I was ppp',rules))
 print('**********************************')
+print('xiaoming ll')
 print(get_response('xiaoming ll', rules))
 print('**********************************')
 
 
 #   '?*x I feel ?*y': ['Do you often feel ?y ?', 'What other feelings do you have?'],
+print("I feel hungry")
 print(get_response("I feel hungry",rule_responses))
 
 
